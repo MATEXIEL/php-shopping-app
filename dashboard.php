@@ -41,8 +41,7 @@ $items = $items->fetchAll();
             <?php foreach ($items as $item): ?>
                 <tr>
                     <td><?= htmlspecialchars($item['item']) ?></td>
-                    <td>$<?= number_format($item['cost'], 2) ?></td> /* burada fiyatı gösterirken okuma kolaylığı olması açısından 
-                                                                        dolar işareti kullandım */  
+                    <td>$<?= number_format($item['cost'], 2) ?></td>
                     <td><?= $item['created_at'] ?></td>
                     <td>
                         <a href="edit_item.php?id=<?= $item['id'] ?>" class="btn btn-warning btn-sm">Düzenle</a>
